@@ -131,7 +131,7 @@ console.log(`String
 with
 multiple lines`);
 */
-
+const osiem = 8;
 const age = 17;
 
 if (age >= 18) {
