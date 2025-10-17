@@ -152,71 +152,56 @@ if (birthYear <= 2000) {
 console.log(century);
 
 
-// type conversion
-const inputYear = '1991';
-console.log(Number(inputYear), inputYear);
-console.log(Number(inputYear) + 18);
 
-console.log(Number('Jonas'));
+const day = 'thursday';
 
-console.log(typeof NaN);
-
-console.log(String(23), 23);
-
-// type coercion
-console.log('I am ' + 23 + ' years old');
-console.log('23' - '10' - 3);
-
-
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean('Jonas'));
-console.log(Boolean(''));
-console.log(Boolean({}));
-
-const money = 20;
-if (money) {
-    console.log("Don't spend it all");
-} else {
-    console.log('You should get a job!');
-}
-    
-const age = 18;
-if (age === 18) console.log('You just became an adult(strict)');
-if (age == 18) console.log('You just became an adult(loose)');
-
-const favourite = Number(prompt("What's you favourite number?"));
-console.log(favourite);
-
-if (favourite == 524355234) {
-    console.log('cool! 524355234 is good number!');
-} else if (favourite === 7) {
-    console.log('7 is ok');
-} else {
-    console.log('Number is not 524355234 and 7');
+switch (day) {
+    case 'monday': // day === 'monday'
+        console.log('Plan course structure');
+        console.log('Go to codding meetup');
+        break;
+    case 'tuesady':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples');
+        break;
+    case 'friday':
+        console.log('Record videos')
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend :D');
+        break;
+    default:
+        console.log('Not a valid day!');
 }
 
-if (favourite !== 524355234) console.log('why not 524355234?');
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to codding meetup');
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Write code examples');
+}
 */
-const hasDriverLicense = true; // A
-const hasGoodVision = true; // B
 
-console.log(hasDriverLicense && hasGoodVision);
-console.log(hasDriverLicense || hasGoodVision);
-console.log(!hasDriverLicense);
+const age = 23;
+// age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💦');
 
-// const shouldDrive = hasDriverLicense && hasGoodVision;
-// if (shouldDrive) {
-//     console.log('Sarah is able to drive!')
-// } else {
-//     console.log('Someone else should drive...');
-// }
+const drink = age >= 18 ? 'wine 🍷' : 'water 💦';
+console.log(drink);
 
-const isTired = false; // C
-console.log(hasDriverLicense && hasGoodVision && isTired);
-
-if (hasDriverLicense && hasGoodVision && !isTired) {
-    console.log('Sarah is able to drive!')
+let drink2;
+if (age >= 18) {
+    drink2 = 'wine 🍷';
 } else {
-    console.log('Someone else should drive...');
+    drink2 = 'water 💦';
 }
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💦'}`);
+
